@@ -11,17 +11,17 @@ The real performance depends on multiple factors, including your hardware, cooli
 
 Measure the TFLOPS for various micro-benchmarkings. Results are from running [micro_bench.ipynb](micro_bench.ipynb).
 
-|                                        | A100      |  A6000   | V100      | 3090 Ti  |
-| -------------------------------------- | :-------: | :------: | :-------: | :------: |
-| Theory TF32(FP32) / FP16               | 156 / 312 | 75 / 150 | 16 / 125  | 80 / 160 |
-| Memory (GB) / Bandwidth (GB/s)         | 80 / 2039 | 48 / 768 | 32 / 900  | 24 / 1008 |
-| Approximate Price $                    |  16,000   |  4,000   |   3,500   |  1,500   |
-| Matrix Multiplication FP32 / FP16      | 116 / 230 | 60 / 95  |  14 / 95  | 42 / 81  |
-| Vector Multiplication                  |   0.202   |  0.082   |   0.098   |  0.107   |
-| Bert Layer Forward / Forward+Backward  | 110 / 136 | 60 / 70  |  53 / 64  | 56 / 62  |
-| GPT-2 Layer Forward / Forward+Backward |  45 / 53  | 35 / 38  |  32 / 36  | 37 / 39  |
-| T5 Encoder Forward / Forward+Backward  |  44 / 56  | 34 / 41  |  31 / 38  | 36 / 41  |
-| T5 Decoder Forward / Forward+Backward  |  38 / 47  | 28 / 34  |  26 / 32  | 30 / 36  |
+|                                        | A100      |  A6000   | V100      | 3090 Ti  |   4090   |
+| -------------------------------------- | :-------: | :------: | :-------: | :------: | :------: |
+| Theory TF32(FP32) / FP16               | 156 / 312 | 75 / 150 | 16 / 125  | 80 / 160 | 82.6 / 330.4 |
+| Memory (GB) / Bandwidth (GB/s)         | 80 / 2039 | 48 / 768 | 32 / 900  | 24 / 1008 | 24 / 1008 |
+| Approximate Price $                    |  16,000   |  4,000   |   3,500   |  1,500   | 1,599 |
+| Matrix Multiplication FP32 / FP16      | 116 / 230 | 60 / 95  |  14 / 95  | 42 / 81  | 54 / 161 |
+| Vector Multiplication                  |   0.202   |  0.082   |   0.098   |  0.107   | 0.491 |
+| Bert Layer Forward / Forward+Backward  | 110 / 136 | 60 / 70  |  53 / 64  | 56 / 62  | 99 / 104 |
+| GPT-2 Layer Forward / Forward+Backward |  45 / 53  | 35 / 38  |  32 / 36  | 37 / 39  | 49 / 55 |
+| T5 Encoder Forward / Forward+Backward  |  44 / 56  | 34 / 41  |  31 / 38  | 36 / 41  | 47 / 57 |
+| T5 Decoder Forward / Forward+Backward  |  38 / 47  | 28 / 34  |  26 / 32  | 30 / 36  | 38 / 47 |
 
 
 
